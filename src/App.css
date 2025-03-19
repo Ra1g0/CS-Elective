@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tan+Songbird&display=swap');
+
+.font-tan-songbird {
+  font-family: 'Tan Songbird', serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Garet&display=swap');
+
+.font-garet {
+  font-family: 'Garet', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Cooper+Black&display=swap');
+
+.font-cooper-black {
+  font-family: 'Cooper Black', serif;
+}
+@font-face {
+  font-family: 'TT Firs Text Trial';
+  src: url('path/to/TTFirsTextTrial-Regular.woff2') format('woff2'),
+       url('path/to/TTFirsTextTrial-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-tt-firs-text {
+  font-family: 'TT Firs Text Trial', sans-serif;
+}
+::placeholder {
+  color: grey;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: grey;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: grey;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.background {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.8); 
+}
+
+footer {
+  flex-shrink: 0;
+}
