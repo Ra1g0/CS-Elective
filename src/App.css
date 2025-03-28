@@ -1,19 +1,7 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Tan+Songbird&display=swap');
-
-.font-tan-songbird {
-  font-family: 'Tan Songbird', serif;
-}
 @import url('https://fonts.googleapis.com/css2?family=Garet&display=swap');
-
-.font-garet {
-  font-family: 'Garet', sans-serif;
-}
 @import url('https://fonts.googleapis.com/css2?family=Cooper+Black&display=swap');
 
-.font-cooper-black {
-  font-family: 'Cooper Black', serif;
-}
 @font-face {
   font-family: 'TT Firs Text Trial';
   src: url('path/to/TTFirsTextTrial-Regular.woff2') format('woff2'),
@@ -22,9 +10,22 @@
   font-style: normal;
 }
 
+.font-tan-songbird {
+  font-family: 'Tan Songbird', serif;
+}
+
+.font-garet {
+  font-family: 'Garet', sans-serif;
+}
+
+.font-cooper-black {
+  font-family: 'Cooper Black', serif;
+}
+
 .font-tt-firs-text {
   font-family: 'TT Firs Text Trial', sans-serif;
 }
+
 ::placeholder {
   color: grey;
   opacity: 1; /* Firefox */
