@@ -30,19 +30,19 @@ function Shop() {
   // Product List
   const [products, setProducts] = useState<Product[]>([
     { id: 1, name: "15 oz Mug", price: 250.0, image: "/src/assets/shop/products/mugs/mug1.jpeg", liked: false, sales: 100, description: "A high-quality 15 oz ceramic mug, perfect for coffee lovers." },
-    { id: 2, name: "Badge Balloon", price: 100.0, image: "/src/assets/shop/products/Badge Pens/badge3.jpeg", liked: false, sales: 250, description: "These pens are perfect for birthdays, thank-you gifts, or any occasion that calls for a personal touch." },
+    { id: 2, name: "Badge Pen", price: 100.0, image: "/src/assets/shop/products/Badge Pens/badge3.jpeg", liked: false, sales: 250, description: "These pens are perfect for birthdays, thank-you gifts, or any occasion that calls for a personal touch." },
     { id: 3, name: "Burlap Bag", price: 200.0, image: "/src/assets/shop/products/Burlap Bag/burlap.jpeg", liked: false, sales: 180, description: "Eco-friendly and stylish, this burlap bag is ideal for daily use." },
-    { id: 4, name: "58mm Buttonpins", price: 250.0, image: "/src/assets/shop/products/buttonpin/buttonpin2.jpeg", liked: false, sales: 80, description: "Decorate your bags and outfits with these trendy 58mm button pins." },
-    { id: 5, name: "Sticker Set", price: 150.0, image: "/src/assets/shop/products/", liked: false, sales: 150, description: "A fun collection of stickers to personalize your belongings." },
-    { id: 6, name: "Tote Bag", price: 300.0, image: "/src/assets/shop/products/", liked: false, sales: 90, description: "A durable tote bag, perfect for carrying essentials with style." },
-    { id: 7, name: "Custom Keychain", price: 120.0, image: "/src/assets/shop/keychain.png", liked: false, sales: 140, description: "Personalized keychains that make great gifts or souvenirs." },
-    { id: 8, name: "Photo Frame", price: 350.0, image: "/src/assets/shop/products/", liked: false, sales: 75, description: "A stylish photo frame to showcase your favorite memories." },
-    { id: 9, name: "Notebook", price: 180.0, image: "/src/assets/shop/products/", liked: false, sales: 200, description: "A beautifully designed notebook for your notes and sketches." },
-    { id: 10, name: "Personalized Pen", price: 90.0, image: "/src/assets/shop/products/", liked: false, sales: 50, description: "A sleek personalized pen, great for writing with style." },
+    { id: 4, name: "58mm Buttonpins", price: 25.0, image: "/src/assets/shop/products/buttonpin/buttonpin2.jpeg", liked: false, sales: 80, description: "Decorate your bags and outfits with these trendy 58mm button pins." },
+    { id: 5, name: "Engraved Wooden Keychain", price: 150.0, image: "/src/assets/shop/products/keychain/keychain.jpeg", liked: false, sales: 150, description: "Perfect for keeping loved ones close, whether it’s for your car keys, motor keys, or house keys." },
+    { id: 6, name: "Tote Bag", price: 95.0, image: "/src/assets/shop/products/totebag/totebag.jpeg", liked: false, sales: 90, description: "A durable tote bag, perfect for carrying essentials with style." },
+    { id: 7, name: "Leather Engraved Keychain w/ Hook & Ring", price: 75.0, image: "/src/assets/shop/products/leatherkey/lkeychain.jpg", liked: false, sales: 140, description: "Personalized keychains that make great gifts or souvenirs." },
+    { id: 8, name: "Photo Frame", price: 350.0, image: "/src/assets/shop/products/frame/frame1.jpg", liked: false, sales: 75, description: "A stylish photo frame to showcase your favorite memories." },
+    { id: 9, name: "Personalized Notebook", price: 150.0, image: "/src/assets/shop/products/notebook/nb1.jpeg", liked: false, sales: 200, description: "A beautifully designed notebook for your notes and sketches." },
+    { id: 10, name: "Wooden Pen & Case", price: 300.0, image: "/src/assets/shop/products/woodenpencase/pen.jpg", liked: false, sales: 50, description: "A sleek personalized pen, great for writing with style." },
     { id: 11, name: "Gift Box Set", price: 500.0, image: "/src/assets/shop/products/gift/gift3.jpeg", liked: false, sales: 300, description: "A curated gift box set, perfect for special occasions." },
-    { id: 12, name: "Canvas Pouch", price: 220.0, image: "/src/assets/shop/products/", liked: false, sales: 130, description: "A compact and stylish canvas pouch for everyday use." },
-    { id: 13, name: "Gift Box Set", price: 500.0, image: "/src/assets/shop/products/gift/gift1.jpeg", liked: false, sales: 300, description: "A thoughtfully arranged gift box for your loved ones." },
-    { id: 14, name: "Canvas Pouch", price: 220.0, image: "/src/assets/shop/products/", liked: false, sales: 130, description: "A versatile and durable canvas pouch, perfect for small essentials." }
+    { id: 12, name: "Canvas Pouch", price: 95.0, image: "/src/assets/shop/products/pouch/canvaspouch.jpg", liked: false, sales: 130, description: "A compact and stylish canvas pouch for everyday use." },
+    { id: 13, name: "Custom Dri-Fit Shirts", price: 90.0, image: "/src/assets/shop/products/drifit/drifit.jpg", liked: false, sales: 300, description: "Looking for custom corporate uniforms? Whether it’s for company events, team uniforms, or daily workwear, we offer premium Dri-Fit, cotton, and polo shirts customized with your logo, design, or branding." },
+    { id: 14, name: "Cup with Lid and Straw", price: 120.0, image: "/src/assets/shop/products/cupwstraw/custommug.jpg", liked: false, sales: 130, description: "These cups with lids and straws are perfect for ANY occasion! Whether it's a gift for a loved one, a treat for yourself, or for your kids." }
 ]);
 
   //selectedProduct state to manage the product view modal
