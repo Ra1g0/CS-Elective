@@ -1,8 +1,8 @@
 import Header from "../Components/Header"; 
-import Footer from "../Components/Footer";
+import Footer from "../Components/Footer"; 
 import "../App.css";
 
-function Services () {
+function Services() {
   return (
     <div>
       <Header />
@@ -34,50 +34,49 @@ function Services () {
               />
             
             <div className="relative z-1 pt-60 pb-0">
-              <div className="flex flex-wrap justify-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                
+              <div className="flex flex-wrap justify-center gap-10 justify-between overflow-x-auto space-x-4 p-4">
                 {/* Image 1 */}
-                <div className="flex justify-center shrink-0 sm:translate-x-0 md:translate-x-10 lg:-translate-x-15">
+                <div className="flex justify-center shrink-0">
                   <img 
                     src="/src/assets/services/arch4.png"
                     alt="Arch 4"
-                    className="object-contain max-w-[90%] md:max-w-[45%] lg:max-w-[50%] transition-transform duration-300 hover:scale-105"
+                    className="object-contain max-w-[90%] md:max-w-[45%] lg:max-w-[80%] transition-transform duration-300 hover:scale-105"
                   />
                 </div>
 
                 {/* Image 2 */}
-                <div className="flex justify-center shrink-0  sm:translate-x-0 md:translate-x-5 lg:translate-x-3">
+                <div className="flex justify-center shrink-0">
                   <img 
                     src="/src/assets/services/arch3.png"
                     alt="Arch 3"
-                    className="object-contain max-w-[90%] md:max-w-[45%] lg:max-w-[50%] transition-transform duration-300 hover:scale-105"
+                    className="object-contain max-w-[90%] md:max-w-[45%] lg:max-w-[80%] transition-transform duration-300 hover:scale-105"
                   />
                 </div>
 
                 {/* Image 3 */}
-                <div className="flex justify-center shrink-0 sm:translate-x-0 md:translate-x-10 lg:translate-x-20">
+                <div className="flex justify-center shrink-0">
                   <img 
                     src="/src/assets/services/arch2.png"
                     alt="Arch 2"
-                    className="object-contain max-w-[90%] md:max-w-[45%] lg:max-w-[50%] transition-transform duration-300 hover:scale-105"
+                    className="object-contain max-w-[90%] md:max-w-[45%] lg:max-w-[80%] transition-transform duration-300 hover:scale-105"
                   />
                 </div>
 
                 {/* Image 4 */}
-                <div className="flex justify-center shrink-0 sm:translate-y-0 md:-translate-y-10 lg:-translate-y-50 sm:translate-x-0 md:translate-x-10 lg:translate-x-74">
+                <div className="flex justify-center shrink-0">
                   <img 
                     src="/src/assets/services/arch1.png"
                     alt="Arch 1"
-                    className="object-contain max-w-[90%] md:max-w-[45%] lg:max-w-[50%] transition-transform duration-300 hover:scale-105"
+                    className="object-contain max-w-[90%] md:max-w-[45%] lg:max-w-[80%] transition-transform duration-300 hover:scale-105"
                   />
-                </div> 
+                </div>
 
                 {/* Image 5 */}
-                <div className="flex justify-center shrink-0 sm:translate-y-0 md:-translate-y-10 lg:-translate-y-50 sm:translate-x-0 md:translate-x-10 lg:translate-x-92">
+                <div className="flex justify-center shrink-0">
                   <img 
                     src="/src/assets/services/arch.png"
                     alt="Arch"
-                    className="object-contain max-w-[90%] md:max-w-[45%] lg:max-w-[50%] transition-transform duration-300 hover:scale-105"
+                    className="object-contain max-w-[90%] md:max-w-[45%] lg:max-w-[80%] transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               </div>
@@ -93,11 +92,11 @@ function Services () {
 
               {/* Fixed Overlay Text */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl text-center">
-                <h2 className="text-gray-800 text-1xl sm:text-3xl font-bold mb-0 mt-30">
+                <h2 className="text-gray-800 text-1xl sm:text-3xl font-bold mb-0 mt-35">
                   Why Choose Love, Rivi?
                 </h2>
-                <div className="bg-[#FEC9D1] p-6 rounded-lg shadow-md 
-                w-[80%] sm:w-[80%] md:w-[70%] lg:w-[70%] xl:w-[70%] 
+                <div className="bg-[#FEC9D1] p-6 rounded-lg shadow-md
+                w-[90%] sm:w-[90%] md:w-[90%] lg:w-[80%] xl:w-[95%] 
                 mx-auto my-6 sm:my-8">
                   <ul className="text-gray-700 space-y-4 
                 text-xs sm:text-sm md:text-lg lg:text-2xl xl:text-3xl 
