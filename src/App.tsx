@@ -4,7 +4,7 @@ import Aboutus from "./pages/Aboutus";
 import Contactus from "./pages/Contactus";
 import Login from "./pages/Login";
 import Services from "./pages/Services";
-import Shop from "./pages/Shop";
+import Shop from "./pages/Shop.tsx";
 import Signup from "./pages/Signup.tsx";
 
 function App() {
