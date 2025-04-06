@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Services from "./pages/Services";
 import Shop from "./pages/Shop";
 import Signup from "./pages/Signup.tsx";
+import Admin from "./pages/admin/AdminAdd.tsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/Services" element={<Services />} />
           <Route path="/Shop" element={<Shop />} />
           <Route path="/Signup" element={<Signup />} />
+          <Route path="/admin/AdminAdd" element={<Admin />} />
         </Routes>
       </Router>
     </div>
