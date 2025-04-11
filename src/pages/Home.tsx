@@ -13,6 +13,7 @@ import HeartImage from '../assets/Heart.png';
 import onda1 from '../assets/ondaspot1.png';
 import onda2 from '../assets/ondaspot2.png';
 import onda3 from '../assets/ondaspot3.png';
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -56,13 +57,9 @@ function Home() {
             </p>
 
             {/* Shop Now Button */}
-            <a 
-              href="/shop" 
-              className="mt-4 px-10 py-3 bg-pink-300 text-black font-bold rounded-full flex items-center"
-            >
+            <Link to="/shop">
               <img src={CartImage} alt="Cart" className="w-6 h-6 mr-2" />
-              SHOP NOW
-            </a>
+            </Link>
           </div>
         </section>
         <section className="background flex flex-col items-center justify-center p-30"

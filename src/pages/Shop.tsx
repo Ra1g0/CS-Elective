@@ -222,12 +222,12 @@ function Shop() {
           </div>
           
           {/* Product Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {currentProducts.length > 0 ? (
               currentProducts.map((product) => (
-                <div key={product.id} className="bg-white rounded-lg shadow-md p-6 h-115 relative
-                  cursor-pointer transition-transform transform hover:scale-105">       
-                  <img src={product.image} alt={product.name} className="w-full h-80 object-cover rounded-md"             
+                <div key={product.id} className="bg-white rounded-2xl shadow-md p-6 h-115 relative
+                  cursor-pointer transition-transform transform hover:scale-105 w-95">       
+                  <img src={product.image} alt={product.name} className="w-full h-80 object-cover rounded-2xl"             
                   onClick={() => handleProductClick(product)}/>
                   <h3 className="text-lg font-semibold mt-8 text-starts">{product.name}</h3>
                   <p className="text-gray-600 text-left">₱ {product.price.toFixed(2)}</p>
@@ -304,30 +304,37 @@ function Shop() {
         {/* Product Detail Modal */}
         {selectedProduct && (
           <div className="fixed inset-0 flex justify-center items-center z-50">
-            <div className="bg-white p-6 rounded-2xl border-2 border-pink-400 shadow-lg w-10/12 md:w-3/4 lg:w-2/3 xl:w-2/5 relative flex flex-col md:flex-row">
+            <div className="bg-white p-6 rounded-2xl border-1 border-pink-500 shadow-lg w-10/12 md:w-3/4 lg:w-2/3 xl:w-2/5 relative flex flex-col md:flex-row">
               {/* Product Image */}
-              <div className="w-1/1 h-40 md:w-1/2">
-                <img src={selectedProduct.image} alt={selectedProduct.name} className="w-full h-80 object-cover rounded-md" />
+              <div className="w-full md:w-1/2 h-60 sm:h-72 md:h-87">
+                <img 
+                  src={selectedProduct.image} 
+                  alt={selectedProduct.name} 
+                  className="w-full h-full object-cover rounded-md" 
+                />
               </div>
 
               {/* Product Details */}
-              <div className="w-full md:w-1/2 p-4">
-                <button className="absolute top-3 right-3 text-2xl font-bold text-gray-600 hover:text-gray-900" onClick={closeProductView}>
+              <div className="w-full md:w-1/2 p-4 relative">
+                <button 
+                  className="absolute top-2 right-2 text-2xl font-bold text-gray-600 hover:text-gray-900" 
+                  onClick={closeProductView}
+                >
                   ×
                 </button>
 
-                <h3 className="text-2xl font-semibold">{selectedProduct.name}</h3>
-                <p className="text-gray-700 text-lg mt-1">₱ {selectedProduct.price.toFixed(2)}</p>
+                <h3 className="text-xl sm:text-2xl font-semibold">{selectedProduct.name}</h3>
+                <p className="text-lg mt-1">₱ {selectedProduct.price.toFixed(2)}</p>
 
                 {/* Colors */}
-                <p className="mt-3 text-gray-600 font-semibold">Colors:</p>
+                <p className="mt-3  font-semibold">Colors:</p>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {["Blue", "Pink", "Violet", "Yellow", "Orange"].map((color) => (
                     <span
                       key={color}
                       onClick={() => setSelectedColor(color)}
-                      className={`px-3 py-1 rounded-md text-sm cursor-pointer transition-all ${
-                        selectedColor === color ? "bg-pink-500 text-white" : "bg-gray-200 text-gray-700"
+                      className={`px-3 py-1 rounded-xl text-sm cursor-pointer transition-all ${
+                        selectedColor === color ? "bg-pink-500 text-white" : "bg-pink-200 "
                       }`}
                     >
                       {color}
@@ -336,14 +343,14 @@ function Shop() {
                 </div>
 
                 {/* Styles */}
-                <p className="mt-3 text-gray-600 font-semibold">Style:</p>
+                <p className="mt-3 font-semibold">Style:</p>
                 <div className="flex gap-2 mt-1">
                   {["Plain", "Personalized"].map((style) => (
                     <span
                       key={style}
                       onClick={() => setSelectedStyle(style)}
-                      className={`px-3 py-1 rounded-md text-sm cursor-pointer transition-all ${
-                        selectedStyle === style ? "bg-pink-500 text-white" : "bg-gray-200 text-gray-700"
+                      className={`px-3 py-1 rounded-xl text-sm cursor-pointer transition-all ${
+                        selectedStyle === style ? "bg-pink-500 text-white" : "bg-pink-200 "
                       }`}
                     >
                       {style}
@@ -352,57 +359,53 @@ function Shop() {
                 </div>
 
                 {/* Description */}
-                <p className="text-sm text-gray-500 mt-3">
+                <p className="text-sm mt-3">
                   {selectedProduct.description}
                 </p>
 
                 {/* Buttons */}
-                <div className="flex gap-2 mt-4">
-                <button 
-                    className="flex-1 bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg transition-all"
+                <div className="flex flex-col sm:flex-row gap-2 mt-4">
+                  <button 
+                    className="flex-1 bg-pink-500 hover:bg-pink-700 text-white px-4 py-2 rounded-lg transition-all"
                     onClick={() => {
-                    // Function to handle adding to cart
-                    if (!isLoggedIn) {
-                      let countdown = 3;
-                  
-                      const countdownInterval = setInterval(() => {
-                        setNotification(`Not logged in. Redirecting to login in ${countdown}...`);
-                        countdown--;
-                  
-                        if (countdown < 0) {
-                          clearInterval(countdownInterval);
-                          navigate("/login");
-                        }
-                      }, 1000);
-                  
-                      return;
-                    }
+                      if (!isLoggedIn) {
+                        let countdown = 3;
+                        const countdownInterval = setInterval(() => {
+                          setNotification(`Not logged in. Redirecting to login in ${countdown}...`);
+                          countdown--;
+                          if (countdown < 0) {
+                            clearInterval(countdownInterval);
+                            navigate("/login");
+                          }
+                        }, 1000);
+                        return;
+                      }
 
-                    if (!selectedColor || !selectedStyle) {
-                      setNotification("Please select a color and style before adding to cart.");
+                      if (!selectedColor || !selectedStyle) {
+                        setNotification("Please select a color and style before adding to cart.");
+                        setTimeout(() => {
+                          setNotification("");
+                        }, 4000);
+                        return;
+                      }
+
+                      const cartItem = {
+                        ...selectedProduct,
+                        selectedColor,
+                        selectedStyle,
+                        quantity: 1,
+                      };
+
+                      const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+                      existingCart.push(cartItem);
+                      localStorage.setItem("cart", JSON.stringify(existingCart));
+
+                      setNotification(`${selectedProduct.name} in ${selectedColor} and ${selectedStyle} has been added to cart!`);
                       setTimeout(() => {
-                        setNotification("");
-                      }, 4000);
-                      return;
-                    }
-
-                    const cartItem = {
-                      ...selectedProduct,
-                      selectedColor,
-                      selectedStyle,
-                      quantity: 1,
-                    };
-
-                    const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
-                    existingCart.push(cartItem);
-                    localStorage.setItem("cart", JSON.stringify(existingCart));
-
-                    setNotification(`${selectedProduct.name} in ${selectedColor} and ${selectedStyle} has been added to cart!`);
-                    setTimeout(() => {
-                      setNotification(null);
-                    }, 3000);
-                    closeProductView();
-                  }}
+                        setNotification(null);
+                      }, 3000);
+                      closeProductView();
+                    }}
                   >
                     {isLoggedIn ? "Add to Cart 🛒" : "Log in to add to cart 🔒"}
                   </button>
