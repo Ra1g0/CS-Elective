@@ -3,10 +3,9 @@ import { useNavigate } from "react-router-dom";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import SGSM from "../assets/SGSM.png";
-import FacebookIcon from "../assets/facebook-icon.png"; 
-import GoogleIcon from "../assets/google-icon.png"; 
+import FacebookIcon from "../assets/facebook-icon.png";
+import GoogleIcon from "../assets/google-icon.png";
 import "../App.css";
-
 
 function Login() {
   const navigate = useNavigate();
@@ -14,7 +13,11 @@ function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  // Dummy user data
+  // Dummy admin credentials
+  const adminEmail = "admin@gmail.com";
+  const adminPassword = "password123";
+
+  // Dummy user credentials
   const dummyUser = {
     email: "test@example.com",
     password: "123456",
@@ -23,12 +26,24 @@ function Login() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Check if admin credentials are entered
+    if (email === adminEmail && password === adminPassword) {
+      localStorage.setItem("isAdmin", "true");
+      alert("Logged in as admin!");
+      navigate("/admin"); // Redirect to Admin page
+      return;
+    }
+
+    // Check if user credentials are entered
     if (email === dummyUser.email && password === dummyUser.password) {
       localStorage.setItem("isLoggedIn", "true");
+      alert("Logged in as user!");
       navigate("/shop"); // Redirect to Shop page
-    } else {
-      setError("Invalid email or password.");
+      return;
     }
+
+    // If credentials are invalid
+    setError("Invalid email or password.");
   };
 
   return (
@@ -71,7 +86,10 @@ function Login() {
               </div>
 
               <div className="flex justify-between items-center mb-4">
-                <button type="submit" className="bg-pink-400 text-white px-6 py-2 rounded text-sm hover:bg-pink-500 transition">
+                <button
+                  type="submit"
+                  className="bg-pink-400 text-white px-6 py-2 rounded text-sm hover:bg-pink-500 transition"
+                >
                   LOG IN
                 </button>
                 <div className="text-pink-600 text-sm cursor-pointer hover:underline">
@@ -96,7 +114,9 @@ function Login() {
 
               <div className="mt-4 text-center">
                 <span>Don’t have an account? </span>
-                <a href="/Signup" className="text-pink-600 font-semibold">Sign Up</a>
+                <a href="/Signup" className="text-pink-600 font-semibold">
+                  Sign Up
+                </a>
               </div>
             </form>
           </div>

@@ -7,6 +7,7 @@ import CartLogo from '../assets/Cart.png';
 import MessageLogo from '../assets/Message.png';
 import VectorLogo from '../assets/Vector.png';
 import '../App.css'; 
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -20,7 +21,9 @@ function Header() {
             <a href="/Login">
               <img src={LoginLogo} alt="Login Logo" className="h-5" />
             </a>
-            <img src={CartLogo} alt="Cart Logo" className="h-5" />
+            <Link to="/cart">
+              <img src={CartLogo} alt="Cart Logo" className="h-5" />
+            </Link>
             <img src={MessageLogo} alt="Message Logo" className="h-5" />
             <img src={VectorLogo} alt="Vector Logo" className="h-5" />
           </div>
