@@ -8,6 +8,10 @@ import Shop from "./pages/Shop";
 import Signup from "./pages/Signup.tsx";
 import Admin from "./pages/admin/AdminAdd.tsx";
 import MyCart from "./pages/cart.tsx";
+import MyOrder from "./pages/MyOrder.tsx";
+import Refund from "./pages/Refund.tsx";
+import SubmitRef from "./pages/SubmitRef.tsx";
+import Notifications from "./pages/Notif.tsx";
 
 function App() {
   return (
@@ -24,6 +28,10 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/admin/AdminAdd" element={<Admin />} />
           <Route path="/cart" element={<MyCart />} />
+          <Route path="/orders" element={<MyOrder/>}/>
+          <Route path="/refund" element={<Refund/>}/>
+          <Route path="/submitrefund" element={<SubmitRef/>} />
+          <Route path="/notif" element={<Notifications/>} />
         </Routes>
       </Router>
     </div>

@@ -191,7 +191,7 @@ function MyCart() {
                 }`}
                 onClick={() => {
                     setActiveMenu("notifications");
-                    navigate("/notifications");
+                    navigate("/notif");
                 }}
                 >
                 Notifications
