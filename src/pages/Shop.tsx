@@ -188,6 +188,7 @@ function Shop() {
                   Add Product
                 </Link>
               )}
+
               {/* Search Input */}
               <div className="relative">
                 <input 
@@ -243,12 +244,24 @@ function Shop() {
 
                   {/* Admin-only Delete Button */}
                   {isAdmin && (
-                    <button
-                      onClick={() => setProductToDelete(product)}
-                      className="bg-red-500 text-white px-4 py-2 rounded mt-4"
-                    >
-                      Delete
-                    </button>
+                    <div className="gap-4 flex">
+                      <button
+                        onClick={() => setProductToDelete(product)}
+                        className="bg-red-500 text-white px-4 py-2 rounded mt-4"
+                      >
+                        Delete
+                      </button>
+
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          navigate(`/admin/AdminEdit/${product.id}`);
+                        }}
+                        className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
+                      >
+                        Edit
+                      </button>
+                    </div>
                   )}
                 </div>
               ))
@@ -425,7 +438,7 @@ function Shop() {
       </div>
       {/* Confirmation Modal */}
       {productToDelete && (
-        <div className="fixed inset-0 bg-opacity-50 bg-gray-900 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-96 border-2 border-pink-300">
             <h2 className="text-lg font-semibold mb-4">Confirm Deletion</h2>
             <p className="text-gray-600 mb-6">

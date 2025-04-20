@@ -6,12 +6,14 @@ import Login from "./pages/Login";
 import Services from "./pages/Services";
 import Shop from "./pages/Shop";
 import Signup from "./pages/Signup.tsx";
-import Admin from "./pages/admin/AdminAdd.tsx";
+import AdminAdd from "./pages/admin/AdminAdd.tsx";
 import MyCart from "./pages/cart.tsx";
 import MyOrder from "./pages/MyOrder.tsx";
 import Refund from "./pages/Refund.tsx";
 import SubmitRef from "./pages/SubmitRef.tsx";
 import Notifications from "./pages/Notif.tsx";
+import AdminEdit from "./pages/admin/AdminEdit.tsx";
+import Admin from "./pages/admin.tsx";
 
 function App() {
   return (
@@ -26,12 +28,14 @@ function App() {
           <Route path="/Services" element={<Services />} />
           <Route path="/Shop" element={<Shop />} />
           <Route path="/Signup" element={<Signup />} />
-          <Route path="/admin/AdminAdd" element={<Admin />} />
+          <Route path="/admin/AdminAdd" element={<AdminAdd />} />
           <Route path="/cart" element={<MyCart />} />
           <Route path="/orders" element={<MyOrder/>}/>
           <Route path="/refund" element={<Refund/>}/>
           <Route path="/submitrefund" element={<SubmitRef/>} />
           <Route path="/notif" element={<Notifications/>} />
+          <Route path="/admin/AdminEdit/:id" element={<AdminEdit/>} />
+          <Route path="/admin" element={<Admin/>} />
         </Routes>
       </Router>
     </div>

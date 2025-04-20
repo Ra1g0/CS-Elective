@@ -37,9 +37,9 @@ function Home() {
             backgroundPosition: "center",
           }}
         >
-          <div className="p-4 bg-opacity-70 flex flex-col items-center text-center">
+          <div className="p-4 bg-opacity-70 flex flex-col items-center text-center drop-shadow-sm" style={{ WebkitTextStroke: '0.5px black' }}>
             {/* Welcome Heading */}
-            <h2 className="text-5xl font-Garet font-bold text-pink-500 stroke-black drop-shadow-lg">
+            <h2 className=" text-5xl font-Garet font-bold text-pink-500 stroke-black drop-shadow-lg">
               Hi! Welcome to
             </h2>
 
