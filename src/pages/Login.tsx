@@ -6,6 +6,7 @@ import SGSM from "../assets/SGSM.png";
 import FacebookIcon from "../assets/facebook-icon.png";
 import GoogleIcon from "../assets/google-icon.png";
 import "../App.css";
+import Chatbot from '../pages/chatbot'; 
 
 function Login() {
   const navigate = useNavigate();
@@ -123,6 +124,7 @@ function Login() {
         </div>
       </div>
       <Footer />
+      <Chatbot />
     </div>
   );
 }

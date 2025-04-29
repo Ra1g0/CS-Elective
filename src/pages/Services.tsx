@@ -1,6 +1,7 @@
 import Header from "../Components/Header"; 
 import Footer from "../Components/Footer"; 
 import "../App.css";
+import Chatbot from '../pages/chatbot'; 
 
 function Services() {
   return (
@@ -112,6 +113,7 @@ function Services() {
         </section>
       </div>
       <Footer />
+      <Chatbot />
     </div>
   );
 }

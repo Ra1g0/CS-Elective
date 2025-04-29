@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from "../Components/Header"; 
 import Footer from "../Components/Footer";
 import "../App.css";
@@ -7,6 +6,7 @@ import Values from "../assets/Values.png";
 import aboubg from "../assets/bg.jpeg";
 import brief from "../assets/Brief.png";
 import wave from "../assets/wave.png";
+import Chatbot from '../pages/chatbot'; 
 
 function Aboutus() {
   return (
@@ -59,6 +59,7 @@ function Aboutus() {
 
       </div>
       <Footer />
+      <Chatbot /> {/* Include the Chatbot component here */}
     </div>
   );
 }

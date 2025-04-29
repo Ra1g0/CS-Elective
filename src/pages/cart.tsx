@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import "../App.css";
+import Chatbot from '../pages/chatbot'; 
 
 interface MyCartItem {
   id: number;
@@ -351,8 +352,8 @@ function MyCart() {
           </div>
         </main>
       </div>
-
       <Footer />
+      <Chatbot />
     </div>
   );
 }

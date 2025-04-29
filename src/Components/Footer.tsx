@@ -1,6 +1,5 @@
 Footer
 
-import React from 'react';
 import LoveriviLogo from '../assets/Loverivi.png'; 
 import FbLogo from '../assets/Fb_logo.png';
 import EmailLogo from '../assets/email.png';

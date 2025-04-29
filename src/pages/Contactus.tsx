@@ -10,6 +10,7 @@ import igIcon from "../assets/IG.png";
 import fbIcon from "../assets/FB.png";
 import mailIcon from "../assets/Mail.png";
 import "../App.css";
+import Chatbot from '../pages/chatbot'; 
 
 function Contactus() {
   return (
@@ -86,6 +87,7 @@ function Contactus() {
         </div>
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }

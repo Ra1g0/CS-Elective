@@ -1,6 +1,4 @@
-Header
-
-import React from 'react';
+import { useState } from 'react';
 import LoveriviLogo from '../assets/Loverivi.png'; 
 import LoginLogo from '../assets/Login_logo.png';
 import CartLogo from '../assets/Cart.png';
@@ -8,8 +6,15 @@ import MessageLogo from '../assets/Message.png';
 import VectorLogo from '../assets/Vector.png';
 import '../App.css'; 
 import { Link } from 'react-router-dom';
+import Chatbot from '../pages/chatbot'; // Import your Chatbot component
 
 function Header() {
+  const [isChatbotVisible, setIsChatbotVisible] = useState(false);
+
+  const toggleChatbot = () => {
+    setIsChatbotVisible(!isChatbotVisible);
+  };
+
   return (
     <>
       <header className="bg-white p-0 fixed top-0 left-0 w-full z-10 shadow-md border-t-15 border-pink-300">
@@ -24,7 +29,12 @@ function Header() {
             <Link to="/cart">
               <img src={CartLogo} alt="Cart Logo" className="h-5" />
             </Link>
-            <img src={MessageLogo} alt="Message Logo" className="h-5" />
+            <img
+              src={MessageLogo}
+              alt="Message Logo"
+              className="h-5 cursor-pointer"
+              onClick={toggleChatbot} // Toggle chatbot visibility on click
+            />
             <img src={VectorLogo} alt="Vector Logo" className="h-5" />
           </div>
         </nav>
@@ -48,6 +58,11 @@ function Header() {
           </ul>
         </div>
       </header>
+      {isChatbotVisible && (
+        <div className="fixed bottom-5 right-5">
+          <Chatbot /> {/* Render the Chatbot component */}
+        </div>
+      )}
     </>
   );
 }

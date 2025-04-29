@@ -1,6 +1,4 @@
 Home
-
-import React from 'react';
 import Header from "../Components/Header"; 
 import Footer from "../Components/Footer";
 import "../App.css"; 
@@ -14,6 +12,7 @@ import onda1 from '../assets/ondaspot1.png';
 import onda2 from '../assets/ondaspot2.png';
 import onda3 from '../assets/ondaspot3.png';
 import { Link } from 'react-router-dom';
+import Chatbot from '../pages/chatbot';
 
 function Home() {
 
@@ -180,6 +179,7 @@ function Home() {
         </section>
       </div>
       <Footer />
+      <Chatbot />
     </div>
   );
 }

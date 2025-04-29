@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import { Link, useNavigate } from "react-router-dom";
 import "../App.css";
 import { useState, useMemo, useEffect } from "react";
+import Chatbot from '../pages/chatbot'; 
 
 function Shop() {
   // Check if the user is logged in using localStorage
@@ -462,6 +463,7 @@ function Shop() {
         </div>  
       )}
       <Footer />
+      <Chatbot />
     </div>
   );
 }

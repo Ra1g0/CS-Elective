@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import BadgeBallpen from "../assets/BadgeBallpen.png"; // Import your image here
+import Chatbot from '../pages/chatbot'; 
 
 function MyOrder() {
   const [activeMenu, setActiveMenu] = useState("my-order"); // Default to "My Order"
@@ -359,8 +360,8 @@ function MyOrder() {
           </div>
         </div>
       )}
-
       <Footer />
+      <Chatbot />
     </div>
   );
 }

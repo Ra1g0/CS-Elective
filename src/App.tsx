@@ -14,6 +14,7 @@ import SubmitRef from "./pages/SubmitRef.tsx";
 import Notifications from "./pages/Notif.tsx";
 import AdminEdit from "./pages/admin/AdminEdit.tsx";
 import Admin from "./pages/admin.tsx";
+import Chatbot from "./pages/chatbot.tsx";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/notif" element={<Notifications/>} />
           <Route path="/admin/AdminEdit/:id" element={<AdminEdit/>} />
           <Route path="/admin" element={<Admin/>} />
+          <Route path="/chatbot" element={<Chatbot/>} />
         </Routes>
       </Router>
     </div>
