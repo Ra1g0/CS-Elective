@@ -38,7 +38,7 @@ function Notifications() {
     <div className="relative bg-white min-h-screen" style={{ fontFamily: '"TT Firs Text Trial Light", sans-serif' }}>
       <Header />
 
-      <div className="flex py-20">
+      <div className="flex py-50">
         {/* Sidebar */}
         <aside className="w-64 ml-20 p-6 font-semibold text-2xl font-sans">
           <h2 className="text-lg mb-4">Menu</h2>
@@ -73,7 +73,6 @@ function Notifications() {
 
             {[
               { key: "my-cart", label: "My Cart", path: "/cart" },
-              { key: "chat", label: "Chat", path: "/chat" },
               { key: "notifications", label: "Notifications", path: "/notifications" },
             ].map((item) => (
               <p

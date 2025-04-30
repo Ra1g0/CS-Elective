@@ -81,7 +81,7 @@ function MyOrder() {
                   navigate("/shop", { state: { filter: "my-likes" } });
                 }}
               >
-                My Likes
+                Shop
                 <span
                   className={`block h-[2px] w-0 bg-pink-500 transition-all group-hover:w-full ${
                     activeMenu === "my-likes" ? "w-full" : ""
@@ -134,22 +134,6 @@ function MyOrder() {
               <span
                 className={`block h-[2px] w-0 bg-pink-500 transition-all group-hover:w-full ${
                   activeMenu === "my-cart" ? "w-full" : ""
-                }`}
-              ></span>
-            </p>
-            <p
-              className={`cursor-pointer group px-2 py-1 rounded ${
-                activeMenu === "chat" ? "bg-[#F8C0CA]" : ""
-              }`}
-              onClick={() => {
-                setActiveMenu("chat");
-                navigate("/chat");
-              }}
-            >
-              Chat
-              <span
-                className={`block h-[2px] w-0 bg-pink-500 transition-all group-hover:w-full ${
-                  activeMenu === "chat" ? "w-full" : ""
                 }`}
               ></span>
             </p>
