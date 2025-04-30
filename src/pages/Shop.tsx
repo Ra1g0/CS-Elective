@@ -134,7 +134,7 @@ function Shop() {
   };
 
   return (
-    <div className="relative" style={{ fontFamily: '"TT Firs Text Trial Light", sans-serif' }}>
+    <div className="relative">
       <div>
         {notification && (
           <div className="fixed bottom-15 left-1/2 transform -translate-x-1/2 bg-pink-300 justify-center border border-pink-700 rounded-lg shadow-md p-4 z-50">
@@ -143,32 +143,41 @@ function Shop() {
         )}
       </div>
       <Header />
-      <div className="bg-[#f393ae] min-h-screen">
-        <section className="relative flex flex-wrap flex-col justify-center items-center">
-          <div className="absolute mt-30 w-full relative">
-            <div className="w-full relative">
-              <img 
-                src="/src/assets/shop/banner.png" 
-                alt="Shop Banner" 
-                className="w-full"
-              />
-              <img 
-                src="/src/assets/shop/shop.png" 
-                alt="Shop Overlay" 
-                className="absolute w-1/8 top-[35%] left-1/2 -translate-x-1/2 z-1"
-              />
-            </div>
+      <div className="bg-[#f393ae] min-h-screen" style={{ fontFamily: '"TT Firs Text Trial Light", sans-serif' }}>
+      <section className="relative flex flex-wrap flex-col justify-center items-center">
+        <div className="absolute mt-30 w-full relative">
+          <div className="w-full relative">
             <img 
-              src="/src/assets/shop/BG.png" 
-              alt="clouds" 
-              className="absolute top-0 left-0 w-full opacity-100"
-              style={{
-                maskImage: "linear-gradient(to top, white 35%, transparent 100%)",
-                WebkitMaskImage: "linear-gradient(to top, white 30%, transparent 85%)"
-              }}
+              src="/src/assets/shop/banner.png" 
+              alt="Shop Banner" 
+              className="w-full"
             />
+            {/* Replaced image with styled text */}
+            <div 
+              className="absolute top-[35%] left-1/2 -translate-x-1/2 z-1"
+            >
+              <h1 
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-pink-400"
+                style={{
+                  textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
+                  fontFamily: '"TT Firs Text Trial", sans-serif'
+                }}
+              >
+                Shop
+              </h1>
+            </div>
           </div>
-        </section>
+          <img 
+            src="/src/assets/shop/BG.png" 
+            alt="clouds" 
+            className="absolute top-0 left-0 w-full opacity-100"
+            style={{
+              maskImage: "linear-gradient(to top, white 35%, transparent 100%)",
+              WebkitMaskImage: "linear-gradient(to top, white 30%, transparent 85%)"
+            }}
+          />
+        </div>
+      </section>
 
         {/* Product Section */}
         <div className="container mx-auto px-4 py-50">

@@ -16,12 +16,19 @@ function Services() {
                 alt="Shop Banner" 
                 className="w-full"
               />
-            
-              <img 
-                src="/src/assets/services/service_text.png" 
-                alt="Shop Overlay" 
-                className="absolute w-1/3 top-[35%] left-1/2 -translate-x-1/2 z-1"
-              />
+              <div 
+                className="absolute top-[35%] left-1/2 -translate-x-1/2 z-1"
+              >
+                <h1 
+                  className="text-5xl md:text-6xl lg:text-7xl font-bold text-pink-400"
+                  style={{
+                    textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
+                    fontFamily: '"TT Firs Text Trial", sans-serif'
+                  }}
+                >
+                  Our Services
+                </h1>
+              </div>
             </div>
             
             <img 

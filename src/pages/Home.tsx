@@ -38,20 +38,20 @@ function Home() {
         >
           <div className="p-4 bg-opacity-70 flex flex-col items-center text-center drop-shadow-sm" style={{ WebkitTextStroke: '0.5px black' }}>
             {/* Welcome Heading */}
-            <h2 className=" text-5xl font-Garet font-bold text-pink-500 stroke-black drop-shadow-lg">
+            <h2 className=" text-5xl font-Garet font-bold text-pink-400 stroke-black drop-shadow-lg">
               Hi! Welcome to
             </h2>
 
             {/* Love Rivi Logo */}
-            <p className='text-7xl font-Cooper Black font-bold text-pink-500 mt-2'>
+            <p className='text-7xl font-Cooper Black font-bold text-pink-400 mt-2'>
               love, rivi  
             </p>
-            <p className='text-lg text-pink-500 mt-2'>
+            <p className='text-xl text-pink-400 mt-2'>
               CUSTOM GIFTS & PRINTS
             </p>
 
             {/* Description Text */}
-            <p className="text-3xl font-bold text-pink-500 mt-2">
+            <p className="text-3xl font-bold text-pink-400 mt-2">
               We offer different kinds of <br />souvenirs, crafts, and printing services.
             </p>
 
