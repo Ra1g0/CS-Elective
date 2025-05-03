@@ -15,6 +15,8 @@ import Notifications from "./pages/Notif.tsx";
 import AdminEdit from "./pages/admin/AdminEdit.tsx";
 import Admin from "./pages/admin.tsx";
 import Chatbot from "./pages/chatbot.tsx";
+import Profile from "./pages/profile.tsx";
+import AccountSettings from "./pages/AccSet.tsx"  ;
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
           <Route path="/admin/AdminEdit/:id" element={<AdminEdit/>} />
           <Route path="/admin" element={<Admin/>} />
           <Route path="/chatbot" element={<Chatbot/>} />
+          <Route path="/profile" element={<Profile />} /> 
+          <Route path="/AccSet" element={<AccountSettings />} /> 
         </Routes>
       </Router>
     </div>

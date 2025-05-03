@@ -1,4 +1,3 @@
-Home
 import Header from "../Components/Header"; 
 import Footer from "../Components/Footer";
 import "../App.css"; 
@@ -15,7 +14,6 @@ import { Link } from 'react-router-dom';
 import Chatbot from '../pages/chatbot';
 
 function Home() {
-
   const items = [
     { title: "Available Now!", name: "Pillow Box", description: "Soft and comfy pillow box for your needs." },
     { title: "Limited Offer!", name: "Gift Box", description: "Beautifully designed gift box for special occasions." },
@@ -38,7 +36,7 @@ function Home() {
         >
           <div className="p-4 bg-opacity-70 flex flex-col items-center text-center drop-shadow-sm" style={{ WebkitTextStroke: '0.5px black' }}>
             {/* Welcome Heading */}
-            <h2 className=" text-5xl font-Garet font-bold text-pink-400 stroke-black drop-shadow-lg">
+            <h2 className="text-5xl font-Garet font-bold text-pink-400 stroke-black drop-shadow-lg">
               Hi! Welcome to
             </h2>
 
@@ -57,7 +55,10 @@ function Home() {
 
             {/* Shop Now Button */}
             <Link to="/shop">
-              <img src={CartImage} alt="Cart" className="w-6 h-6 mr-2" />
+              <button className="mt-4 flex items-center bg-[#FEC9D1] text-black text-lg font-bold px-6 py-2 rounded-full hover:bg-pink-500 transition duration-300">
+                <img src={CartImage} alt="Cart" className="w-6 h-6 mr-2" />
+                SHOP NOW
+              </button>
             </Link>
           </div>
         </section>
@@ -70,7 +71,7 @@ function Home() {
           }}
         >
           {/* Featured Header */}
-          <div className="bg-pink-300 text-black px-10 py-4 rounded-full text-2xl font-bold mb-15 mr-190">
+          <div className="bg-[#FEC9D1] text-black px-10 py-4 rounded-full text-2xl font-bold mb-15 mr-190">
             Featured Categories
           </div>
 
@@ -83,7 +84,7 @@ function Home() {
                   alt="pillowbox"
                   className="w-full h-60 object-cover"
                 />
-                <div className="bg-pink-400 text-black text-left py-12 px-4 py-0 flex items-center justify-between">
+                <div className="bg-[#FEC9D1] text-black text-left py-12 px-4 py-0 flex items-center justify-between">
                   <div>
                     <p className="text-lg font-semibold">{item.title}</p>
                     <p className="text-sm">{item.name}</p>
@@ -105,14 +106,13 @@ function Home() {
         >
           {/* New Section Content */}
           <div className="grid grid-cols-2 md:grid-cols-2 gap-x-30 gap-y-10">
-            {/* Add content for the new section here */}
             <div className="bg-white shadow-lg rounded-lg overflow-hidden w-120 h-100">
               <img
                 src="https://via.placeholder.com/150"
                 alt="New Arrival"
                 className="w-full h-60 object-cover"
               />
-              <div className="bg-pink-500 text-black text-left py-12 px-4 py-0 flex items-center justify-between">
+              <div className="bg-[#FEC9D1] text-black text-left py-12 px-4 py-0 flex items-center justify-between">
                 <div>
                   <p className="text-lg font-semibold">New Arrival!</p>
                   <p className="text-sm">New Product</p>
@@ -163,19 +163,18 @@ function Home() {
                 src={onda3}
                 alt="Image 3"
                 className="w-full h-70 object-cover rounded-md"
-               
               />
             </div>  
           </div>
           {/* Bottom Line with Centered Text */}
           <div className="flex items-center my-6">
             <div className="flex-grow border-t-2 border-pink-300"></div>
-            <span className="px-4 text-3xl text-gray-600 font-semibold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;ON-THE-SPOT <br></br>
+            <span className="px-4 text-3xl text-gray-600 font-semibold">       
+                ON-THE-SPOT <br></br>
             SOUVENIR-MAKING SERVICE</span>
             <div className="flex-grow border-t-2 border-pink-300"></div>
           </div>
-          <div className='bg-pink-400 h-50'></div>
+          <div className='bg-[#F393AE] h-50'></div>
         </section>
       </div>
       <Footer />

@@ -23,7 +23,7 @@ function Aboutus() {
           }}
         >
           <div className="p-4 bg-opacity-70 flex flex-col items-center text-center">
-            <h2 className="text-7xl font-bold text-pink-300 drop-shadow-lg">
+            <h2 className="text-7xl font-Cooper font-bold text-[#FEC9D1] drop-shadow-lg" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}>
               About Us
             </h2>
           </div>

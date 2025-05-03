@@ -48,6 +48,7 @@ function Notifications() {
             <div className="ml-4">
               {[
                 { label: "Profile", key: "profile", path: "/profile" },
+                { label: "Shop", key: "shop", path: "/shop" },
                 { label: "My Order", key: "my-order", path: "/orders" },
                 { label: "Account Settings", key: "account-settings", path: "/account-settings" },
               ].map((item) => (

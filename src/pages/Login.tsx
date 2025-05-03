@@ -1,20 +1,22 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import SGSM from "../assets/SGSM.png";
 import FacebookIcon from "../assets/facebook-icon.png";
 import GoogleIcon from "../assets/google-icon.png";
 import "../App.css";
-import Chatbot from '../pages/chatbot'; 
 
+// Login component
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
-  // Dummy admin credentials
+  // Dummy credentials for admin and user
   const adminEmail = "admin@gmail.com";
   const adminPassword = "password123";
 
@@ -27,23 +29,23 @@ function Login() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Check if admin credentials are entered
+    // Check if the email and password match the dummy admin credentials
     if (email === adminEmail && password === adminPassword) {
       localStorage.setItem("isAdmin", "true");
       alert("Logged in as admin!");
-      navigate("/admin"); // Redirect to Admin page
+      navigate("/admin");
       return;
     }
 
-    // Check if user credentials are entered
+    // Check if the email and password match the dummy user credentials
     if (email === dummyUser.email && password === dummyUser.password) {
       localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("user", JSON.stringify({ email: email }));
       alert("Logged in as user!");
-      navigate("/shop"); // Redirect to Shop page
+      navigate("/profile");
       return;
     }
 
-    // If credentials are invalid
     setError("Invalid email or password.");
   };
 
@@ -52,6 +54,8 @@ function Login() {
       <Header />
       <div className="min-h-screen flex items-center justify-center bg-[#ffffff] py-10">
         <div className="container mx-auto flex flex-col lg:flex-row items-center">
+
+          {/* Left side image */}
           <div className="w-full lg:w-1/2 flex flex-col items-center">
             <div className="bg-white p-6 rounded-lg">
               <img src={SGSM} alt="Strong Gifts Minds" className="rounded-lg" />
@@ -64,6 +68,7 @@ function Login() {
             {error && <p className="text-red-500">{error}</p>}
 
             <form onSubmit={handleLogin}>
+              {/* Email input */}
               <div className="mb-4">
                 <input
                   type="email"
@@ -71,39 +76,48 @@ function Login() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="border border-gray-400 p-3 rounded w-full bg-white focus:outline-none"
+                  className="p-3 rounded-md border w-full bg-white focus:outline-black-300 border-gray-300 shadow-sm "
                 />
               </div>
 
-              <div className="mb-4">
+              {/* Password input with toggle */}
+              <div className="mb-4 relative">
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  className="border border-gray-400 p-3 rounded w-full bg-white focus:outline-none"
+                  className="p-3 rounded-md border w-full bg-white pr-10 focus:outline-black-300 border-gray-300 shadow-sm "
                 />
+                <div
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500 text-xl"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+                </div>
               </div>
 
               <div className="flex justify-between items-center mb-4">
                 <button
                   type="submit"
-                  className="bg-pink-400 text-white px-6 py-2 rounded text-sm hover:bg-pink-500 transition"
+                  className="bg-pink-400 text-white px-6 py-2 font-semibold rounded text-sm hover:bg-pink-500 transition border-gray-300 shadow-sm "
                 >
                   LOG IN
                 </button>
-                <div className="text-pink-600 text-sm cursor-pointer hover:underline">
+                <div className="text-[#D43950] text-sm font-semibold cursor-pointer hover:underline">
                   Forgot Password?
                 </div>
               </div>
 
+              {/* Divider */}
               <div className="flex items-center my-4">
-                <hr className="flex-grow border-t border-gray-300" />
-                <span className="mx-4 text-gray-500">OR</span>
-                <hr className="flex-grow border-t border-gray-300" />
+                <hr className="flex-grow border-t border-gray-600" />
+                <span className="mx-4 font-bold text-black-500">OR</span>
+                <hr className="flex-grow border-t border-gray-600" />
               </div>
 
+              {/* Social Media Login Buttons */}
               <div className="flex justify-center gap-4">
                 <button className="bg-white border border-gray-300 px-6 py-2 rounded shadow flex items-center gap-2 hover:shadow-md transition">
                   <img src={FacebookIcon} alt="Facebook" className="w-5" /> Facebook
@@ -113,7 +127,8 @@ function Login() {
                 </button>
               </div>
 
-              <div className="mt-4 text-center">
+              {/* Sign Up Link */}
+              <div className="mt-4 font-semibold text-center">
                 <span>Don’t have an account? </span>
                 <a href="/Signup" className="text-pink-600 font-semibold">
                   Sign Up
@@ -124,7 +139,6 @@ function Login() {
         </div>
       </div>
       <Footer />
-      <Chatbot />
     </div>
   );
 }
