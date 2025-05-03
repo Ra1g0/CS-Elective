@@ -41,7 +41,7 @@ function App() {
           <Route path="/admin" element={<Admin/>} />
           <Route path="/chatbot" element={<Chatbot/>} />
           <Route path="/profile" element={<Profile />} /> 
-          <Route path="/AccSet" element={<AccountSettings />} /> 
+          <Route path="/account-settings" element={<AccountSettings />} /> 
         </Routes>
       </Router>
     </div>
