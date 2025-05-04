@@ -29,8 +29,8 @@ function App() {
           <Route path="/Contactus" element={<Contactus />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Services" element={<Services />} />
-          <Route path="/Shop" element={<Shop />} />
-          <Route path="/Signup" element={<Signup />} />
+            <Route path="/Shop" element={<Shop />} />
+            <Route path="/Signup" element={<Signup />} />
           <Route path="/admin/AdminAdd" element={<AdminAdd />} />
           <Route path="/cart" element={<MyCart />} />
           <Route path="/orders" element={<MyOrder/>}/>
@@ -41,7 +41,7 @@ function App() {
           <Route path="/admin" element={<Admin/>} />
           <Route path="/chatbot" element={<Chatbot/>} />
           <Route path="/profile" element={<Profile />} /> 
-          <Route path="/AccSet" element={<AccountSettings />} /> 
+          <Route path="/account-settings" element={<AccountSettings />} /> 
         </Routes>
       </Router>
     </div>

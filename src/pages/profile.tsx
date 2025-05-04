@@ -15,10 +15,10 @@ function Profile() {
   const [profileImage, setProfileImage] = useState<string | null>(null);
   const [selectedCountryCode, setSelectedCountryCode] = useState("+63");
 
-  useEffect(() => {
+ useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
     if (!isLoggedIn) {
-      alert("You must log in first.");
+    alert("You must log in first.");
       navigate("/login");
     }
   }, [navigate]);
